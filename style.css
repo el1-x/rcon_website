@@ -1,3 +1,4 @@
+/** Global **/
 body {
   padding-top: 3.5rem;
 }
@@ -6,6 +7,7 @@ footer {
 	text-align: center;
 }
 
+/** Index & Contact **/
 .jumbotron {
 	background: url(assets/hll_brezz.jpg) no-repeat center center;
 	background-size: cover;
@@ -37,4 +39,24 @@ footer {
 #join-btn {
 	color: #fff;
 	background-color: #7289da;
+}
+
+/** Instrutions **/
+.mb-3 {
+	margin-top: 2rem;
+}
+
+.title {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+.step {
+	font-size: 12pt;
+}
+
+.text-monospace {
+	background: lightgrey;
+	margin-left: 4rem;
+	padding-left: 10px;	
 }
