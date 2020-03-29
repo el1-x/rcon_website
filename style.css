@@ -1,0 +1,40 @@
+body {
+  padding-top: 3.5rem;
+}
+
+footer {
+	text-align: center;
+}
+
+.jumbotron {
+	background: url(assets/hll_brezz.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 400px;
+	color: #fff;
+	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+#contact {
+	background: #7289da;
+	color: #fff;
+	text-shadow: none;
+}
+
+#jumbo-btn {
+	float: right;
+	text-shadow: none;
+}
+
+.container {
+	max-width: 58em;
+}
+
+.card-header {
+	color: #999;
+	text-align: center;
+}
+
+#join-btn {
+	color: #fff;
+	background-color: #7289da;
+}
