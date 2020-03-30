@@ -45,8 +45,24 @@
       <div class="title">
         <h1>Installation & Setup Guide</h1>
         <p class="lead">The application requires the use of Docker to run. The first part of the instructions will cover the installation of the packages for docker & docker-compose. Most distributions will have suitable packages available within their respective repositories</p>
+        <p class="lead">The second part of the instructions will cover running the application and basic management of the containers.</p>
+        <p> Official Docker documentation can be found at the links below.</p>
+        <ul>
+          <li>Docker Engine <a href="https://docs.docker.com/install/">https://docs.docker.com/install/</a></li>
+          <li>Docker Compose <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
+        </ul>
       </div>
       <div class="inst-lnx">
+        <div class="preq">
+        <h3>Prerequisites</h3>
+        <p> There are a couple of things that you will need to make this install as easy as possible.</p>
+        <p>Firstly you will need a copy of the latest <em>docker-compose.yml</em> file from the dev team. Second you will need to create a <em>.env</em> file containing your game server information. Lastly you will need to create a password to protect your install so that only those with permission may access the application, this is done with a <em>.htpasswd file.</em></p>
+        <p>All of the required files can either be created manually or you can download our template and extract the contents of the .zip file to wherever you want.</p>
+        <a class="btn btn btn-lg btn-outline-primary" id="download" role="button" href="../assets/hll_rcon_tool.zip">Download</a>
+        <div class="alert alert-warning" role="alert">
+          <b>Note: </b>This creates the base folder for the install. The application itself is not located within this folder but all logs and data is stored here.
+        </div>
+        </div>
         <h5>The following instructions need to be entered into a command line interface (Terminal)</h5>
         <p class="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system.</p>
         <p>Debian/Ubuntu Linux</p>
