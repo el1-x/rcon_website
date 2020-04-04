@@ -12,7 +12,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon16.png">
 		<link rel="shortcut icon" href="../favicon.ico">
-		<title>HLL Community RCON - Insall</title>
+		<title>HLL Community RCON - Install</title>
 	</head>
 	<body>
     <div class="container">
@@ -37,7 +37,7 @@
             <div class="card-body">
               <h5 class="card-title">Linux Install</h5>
               <p class="card-text">Basic step-by-step instructions to install and run the RCON application with Docker.</p>
-              <p class="card-text"><small class="text-muted">Up-to-date as of 29 Feb 2020</small></p>
+              <p class="card-text"><small class="text-muted">Up-to-date as of 29 Mar 2020</small></p>
             </div>
           </div>
         </div>
@@ -53,35 +53,53 @@
           <li>Docker Compose <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
         </ul>
       </div>
-      <div id="inst-lnx">
+      <div id="linux-install">
         <div id="preq">
           <h3>Prerequisites</h3>
           <hr>
           <p> There are a couple of things that you will need to make this install as easy as possible.</p>
-          <p>Firstly you will need a copy of the latest <em>docker-compose.yml</em> file from the dev team. Second you will need to create a <em>.env</em> file containing your game server information. Lastly you will need to create a password to protect your install so that only those with permission may access the application, this is done with a <em>.htpasswd file.</em></p>
-          <p><code>printf "USER:$(openssl passwd -crypt PASSWORD)\n" >> .htpasswd</code></p>
-          <p>All of the required files can either be created manually or you can download our template and extract the contents of the .zip file to wherever you want.</p>
+          <p>
+						<ol>
+							<li>A copy of the latest <em>docker-compose.yml</em> file from the dev team.</li>
+							<li><em>.env</em> file containing your game server information.</li>
+							<li><em>broadcasts.txt</em> file for sending premade broadcast messaages to your server automatically</li>
+							<li>db_data, logs & pw folders</li>
+							<li><em>.htpasswd</em> file to protect your rcon from unauthorised access.</li>
+						</ol>
+					</p>
+          <p>Using the link below download the .zip file containing items 1-4 of the above list and extract the contents to a directory of your choosing i.e. /home/user.name/</p>
           <a class="btn btn btn-lg btn-outline-primary" id="download" role="button" href="../assets/hll_rcon_tool.zip">Download</a>
           <div class="alert alert-warning" role="alert">
-            <b>Note: </b>This creates the base folder for the install. The application itself is not located within this folder but all logs and data is stored here.
+            <b>Note: </b>The rcon will not be installed within this folder but all logs and data will be stored here for easy access.
           </div>
         </div>
         <div id="inst">
-        <h5>The following instructions need to be entered into a command line interface (Terminal)</h5>
-        <hr>
-        <p id="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system.</p>
-        <p>Debian/Ubuntu Linux</p>
-        <p><code class="text-monospace"> sudo apt-get install docker docker-compose</code></p>
-        <p>Arch Linux</p>
-        <p><code class="text-monospace">pacman -S docker docker-compose</code></p>
-        <hr>
-        <p id="step" style="font-weight:600;">&#x25BA; Set Docker to run at start-up</p>
-        <p><code class="text-monospace">sudo systemctl enable docker</code></p>
-        <div class="alert alert-warning" role="alert">
-          <b>Note: </b>The Docker daemon (dockerd) runs under the root user. To be able to manage your Docker containers all of the following commands will need to be run using <span class="text-monospace" style="color:#e83e8c;">sudo</span></br>
-          If you do not wish to elevate privileges when executing docker commands, you will need to follow the instructions provided by Docker which can be found <a href="https://docs.docker.com/install/linux/linux-postinstall/">here.</a> The remainder of this guide will assume the need for the use of <span class="text-monospace" style="color:#e83e8c;">sudo</span>
+        	<h5>The following instructions need to be entered into a command line interface (Terminal)</h5>
+        	<hr>
+					<p id="step" style="font-weight:600;">&#x25BA; Create a password to proctect your rcon</p>
+					<p>Change directory to the pw folder contained within the contents of the .zip file you extracted.</p>
+					<p><code>cd path/to/hll-rcon-tool/pw/</code></p>
+					<p>Enter the command below but replace USER with your desired username and press Enter. You will be prompted to enter a password and then verify it. If you would like to create multiple users, repeat this step.</p>
+					<p><code>printf "USER:`openssl passwd -apr1`\n" >> .htpasswd</code></p>
+					<p>Return back to the main folder.</p>
+					<p><code>cd ..</code></p>
+        	<p id="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system</p>
+        	<p>Debian/Ubuntu Linux</p>
+        	<p><code class="text-monospace"> sudo apt-get install docker docker-compose</code></p>
+        	<p>Arch Linux</p>
+        	<p><code class="text-monospace">sudo pacman -S docker docker-compose</code></p>
+        	<p id="step" style="font-weight:600;">&#x25BA; Set Docker to run at start-up</p>
+        	<p><code class="text-monospace">sudo systemctl enable docker</code></p>
+        	<div class="alert alert-warning" role="alert"><b>Note: </b>The Docker daemon (dockerd) runs under the root user. To be able to manage your Docker containers all of the following commands will need to be run using <span class="text-monospace" style="color:#e83e8c;">sudo</span>.<br>
+          If you do not wish to elevate privileges when executing docker commands, you will need to follow the instructions provided by Docker which can be found <a href="https://docs.docker.com/install/linux/linux-postinstall/">here.</a> The remainder of this guide will assume the need for the use of <span class="text-monospace" style="color:#e83e8c;">sudo</span>.
+					</div>
+					<p id="step" style="font-weight:600;">&#x25BA; Create the containers and run them</p>
+					<p>This is a simple command becasue all of the required information is within the <em>docker-compose.yml</em> file.</p>
+					<p><code class="text-monospace">sudo docker-compose up -d</code></p>
+					<p>The installation itself may take some time depending on the hardware and internet connection. Please be patient, you will see the progress from within the terminal.</p>
+					<p>Once complete your rcon will be available at your-ip-address:8010</p>
+					<hr>
         </div>
-
       </div>
     </div>
     <!-- Bootstrap JavaScript -->

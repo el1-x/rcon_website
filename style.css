@@ -55,10 +55,6 @@ footer {
 	margin-bottom: 4rem;
 }
 
-#preq em {
-	color: red;
-}
-
 #step {
 	font-size: 12pt;
 }
@@ -66,7 +62,6 @@ footer {
 code {
 	margin-left: 4rem;
 	width: 40rem;
-	font-size: 100%;
 }
 
 #download {
