@@ -7,10 +7,6 @@ footer {
 	text-align: center;
 }
 
-em {
-	color: red;
-}
-
 /** Index & Contact **/
 .jumbotron {
 	background: url(assets/hll_brezz.jpg) no-repeat center center;
@@ -55,18 +51,22 @@ em {
 	margin-bottom: 4rem;
 }
 
-.preq {
+#preq {
 	margin-bottom: 4rem;
 }
 
-.step {
+#preq em {
+	color: red;
+}
+
+#step {
 	font-size: 12pt;
 }
 
-.text-monospace {
-	background: lightgrey;
+code {
 	margin-left: 4rem;
-	padding-left: 10px;	
+	width: 40rem;
+	font-size: 100%;
 }
 
 #download {

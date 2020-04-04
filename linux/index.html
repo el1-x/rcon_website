@@ -44,6 +44,7 @@
       </div>
       <div class="title">
         <h1>Installation & Setup Guide</h1>
+        <hr>
         <p class="lead">The application requires the use of Docker to run. The first part of the instructions will cover the installation of the packages for docker & docker-compose. Most distributions will have suitable packages available within their respective repositories</p>
         <p class="lead">The second part of the instructions will cover running the application and basic management of the containers.</p>
         <p> Official Docker documentation can be found at the links below.</p>
@@ -52,27 +53,36 @@
           <li>Docker Compose <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
         </ul>
       </div>
-      <div class="inst-lnx">
-        <div class="preq">
-        <h3>Prerequisites</h3>
-        <p> There are a couple of things that you will need to make this install as easy as possible.</p>
-        <p>Firstly you will need a copy of the latest <em>docker-compose.yml</em> file from the dev team. Second you will need to create a <em>.env</em> file containing your game server information. Lastly you will need to create a password to protect your install so that only those with permission may access the application, this is done with a <em>.htpasswd file.</em></p>
-        <p>All of the required files can either be created manually or you can download our template and extract the contents of the .zip file to wherever you want.</p>
-        <a class="btn btn btn-lg btn-outline-primary" id="download" role="button" href="../assets/hll_rcon_tool.zip">Download</a>
-        <div class="alert alert-warning" role="alert">
-          <b>Note: </b>This creates the base folder for the install. The application itself is not located within this folder but all logs and data is stored here.
+      <div id="inst-lnx">
+        <div id="preq">
+          <h3>Prerequisites</h3>
+          <hr>
+          <p> There are a couple of things that you will need to make this install as easy as possible.</p>
+          <p>Firstly you will need a copy of the latest <em>docker-compose.yml</em> file from the dev team. Second you will need to create a <em>.env</em> file containing your game server information. Lastly you will need to create a password to protect your install so that only those with permission may access the application, this is done with a <em>.htpasswd file.</em></p>
+          <p><code>printf "USER:$(openssl passwd -crypt PASSWORD)\n" >> .htpasswd</code></p>
+          <p>All of the required files can either be created manually or you can download our template and extract the contents of the .zip file to wherever you want.</p>
+          <a class="btn btn btn-lg btn-outline-primary" id="download" role="button" href="../assets/hll_rcon_tool.zip">Download</a>
+          <div class="alert alert-warning" role="alert">
+            <b>Note: </b>This creates the base folder for the install. The application itself is not located within this folder but all logs and data is stored here.
+          </div>
         </div>
-        </div>
+        <div id="inst">
         <h5>The following instructions need to be entered into a command line interface (Terminal)</h5>
-        <p class="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system.</p>
+        <hr>
+        <p id="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system.</p>
         <p>Debian/Ubuntu Linux</p>
-        <p class="text-monospace"> sudo apt-get install docker docker-compose</p>
+        <p><code class="text-monospace"> sudo apt-get install docker docker-compose</code></p>
         <p>Arch Linux</p>
-        <p class="text-monospace">pacman -Sy docker docker-compose</p>
-        <p class="step" style="font-weight:600;">&#x25BA; Set Docker to run at start-up</p>
-        
-      </div>
+        <p><code class="text-monospace">pacman -S docker docker-compose</code></p>
+        <hr>
+        <p id="step" style="font-weight:600;">&#x25BA; Set Docker to run at start-up</p>
+        <p><code class="text-monospace">sudo systemctl enable docker</code></p>
+        <div class="alert alert-warning" role="alert">
+          <b>Note: </b>The Docker daemon (dockerd) runs under the root user. To be able to manage your Docker containers all of the following commands will need to be run using <span class="text-monospace" style="color:#e83e8c;">sudo</span></br>
+          If you do not wish to elevate privileges when executing docker commands, you will need to follow the instructions provided by Docker which can be found <a href="https://docs.docker.com/install/linux/linux-postinstall/">here.</a> The remainder of this guide will assume the need for the use of <span class="text-monospace" style="color:#e83e8c;">sudo</span>
+        </div>
 
+      </div>
     </div>
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
