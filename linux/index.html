@@ -98,6 +98,12 @@
 					<p><code class="text-monospace">sudo docker-compose up -d</code></p>
 					<p>The installation itself may take some time depending on the hardware and internet connection. Please be patient, you will see the progress from within the terminal.</p>
 					<p>Once complete your rcon will be available at your-ip-address:8010</p>
+					<p id="step" style="font-weight:600;">&#x25BA; Container management and updates</p>
+					<p>To update your rcon to the latest version you will need to perform 3 seperate commands. Firstly you will need to stop the running containers, download the updates and then start the containers again.
+					<p><code class="text-monospace">sudo docker stop $(docker ps -q)</code></p>
+					<p><code class="text-monospace">sudo docker-compose pull</code></p>
+					<p><code class="text-monospace">sudo docker-compose up -d</code></p>
+					<p>If you are experiencing any issues or are having any difficulties following these instructions, please join us on Discord so that we can help you.</p>
 					<hr>
         </div>
       </div>
