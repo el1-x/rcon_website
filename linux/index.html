@@ -74,7 +74,7 @@
           </div>
         </div>
         <div id="inst">
-        	<h5>The following instructions need to be entered into a command line interface (Terminal)</h5>
+        	<h5>The following <span style="color:#e83e8c;">instructions</span> need to be entered into a command line interface (Terminal)</h5>
         	<hr>
 					<p id="step" style="font-weight:600;">&#x25BA; Create a password to proctect your rcon</p>
 					<p>Change directory to the pw folder contained within the contents of the .zip file you extracted.</p>
@@ -84,20 +84,41 @@
 					<p>Return back to the main folder.</p>
 					<p><code>cd ..</code></p>
         	<p id="step" style="font-weight:600;">&#x25BA; Install docker & docker-compose to your system</p>
-        	<p>Debian/Ubuntu Linux</p>
+        	<p>Debian/Ubuntu Linux:</p>
         	<p><code class="text-monospace"> sudo apt-get install docker docker-compose</code></p>
-        	<p>Arch Linux</p>
+        	<p>Arch Linux:</p>
         	<p><code class="text-monospace">sudo pacman -S docker docker-compose</code></p>
         	<p id="step" style="font-weight:600;">&#x25BA; Set Docker to run at start-up</p>
         	<p><code class="text-monospace">sudo systemctl enable docker</code></p>
         	<div class="alert alert-warning" role="alert"><b>Note: </b>The Docker daemon (dockerd) runs under the root user. To be able to manage your Docker containers all of the following commands will need to be run using <span class="text-monospace" style="color:#e83e8c;">sudo</span>.<br>
           If you do not wish to elevate privileges when executing docker commands, you will need to follow the instructions provided by Docker which can be found <a href="https://docs.docker.com/install/linux/linux-postinstall/">here.</a> The remainder of this guide will assume the need for the use of <span class="text-monospace" style="color:#e83e8c;">sudo</span>.
-					</div>
+          </div>
+          <p id="step" style="font-weight:600;">&#x25BA; Edit .env and broadcasts.txt</p>
+          <p>There are two easy ways to edit these files. Either via the command line (nano/vim) or using a graphical text editor gedit/kate. In each case you will need to format your messages with a time (in seconds) followed by the message itself.<br>See below examples.</p>
+          <p><b>Using nano:</b></p>
+          <p><code class="text-monospace">nano broadcasts.txt</code></p>
+          <p>Once nano opens within your terminal, you can begin typing.</p>
+          <p><code class="text-monospace">300 Welcome to Hell Let Loose</code><br><code class="text-monospace">120 Please follow the server rules</code></p>
+          <p>Once you have completed your messages you will need to save the file and close the text editor.</p>
+          <p>
+            <ol>
+              <li>Press Ctl+O to write out (save) your changes followed by Enter to confirm</li>
+              <li>Press Ctl+X to close the text editor</li>
+            </ol>
+          </p>
+          <p><code class="text-monospace">nano .env</code></p>
+          <p>Once the .env opens you will see the below entries in the file.</p>
+          <p>HLL_HOST=<br>HLL_PORT=<br>HLL_PASSWORD=<br>HLL_DB_PASSWORD=<br>HLL_DB_HOST_PORT=5432<br>HLL_REDIS_HOST_PORT=6379<br>RCONWEB_PORT=8010</p>
+          <p>Simply add your server details after the = sign and save.<br> Ctl+O - Enter - Ctl+X</p>
+          <p><b>Using vim:</b></p>
+          <p><code class="text-monospace">vim broadcasts.txt</code></p>
+          <p>Once vim opens you will need to press i to enter INSERT mode. Type your broadcast messages then press Esc once done. To save them type :wq and press Enter. Repeat the same process for the .env file</p>
+          <p>The last way to edit both the .env & broadcasts files is to a graphical text editor. Navigate to the hll_rcon_tool folder and press Alt+. to show hidden files. Double click the file you want to edit and your system will open the file in the default text editor.</p>
 					<p id="step" style="font-weight:600;">&#x25BA; Create the containers and run them</p>
 					<p>This is a simple command becasue all of the required information is within the <em>docker-compose.yml</em> file.</p>
 					<p><code class="text-monospace">sudo docker-compose up -d</code></p>
 					<p>The installation itself may take some time depending on the hardware and internet connection. Please be patient, you will see the progress from within the terminal.</p>
-					<p>Once complete your rcon will be available at your-ip-address:8010</p>
+					<p>Once complete your rcon will be available at <span class="text-monospace">your.ip.address:8010</span></p>
 					<p id="step" style="font-weight:600;">&#x25BA; Container management and updates</p>
 					<p>To update your rcon to the latest version you will need to perform 3 seperate commands. Firstly you will need to stop the running containers, download the updates and then start the containers again.
 					<p><code class="text-monospace">sudo docker stop $(docker ps -q)</code></p>
