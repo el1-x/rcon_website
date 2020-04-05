@@ -25,6 +25,11 @@ footer {
 #jumbo-btn {
 	float: right;
 	text-shadow: none;
+	padding: .5rem 1rem;
+	font-size: 1.25rem;
+	border: 1px solid;
+	border-radius: .3rem;
+	border-color: #fff;
 }
 
 .container {
