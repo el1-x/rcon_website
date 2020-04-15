@@ -78,7 +78,7 @@
         	<hr>
 					<p id="step" style="font-weight:600;">&#x25BA; Create a password to proctect your rcon</p>
 					<p>Change directory to the pw folder contained within the contents of the .zip file you extracted.</p>
-					<p><code>cd path/to/hll-rcon-tool/pw/</code></p>
+					<p><code>cd path/to/hll_rcon/pw/</code></p>
 					<p>Enter the command below but replace USER with your desired username and press Enter. You will be prompted to enter a password and then verify it. If you would like to create multiple users, repeat this step.</p>
 					<p><code>printf "USER:`openssl passwd -apr1`\n" >> .htpasswd</code></p>
 					<p>Return back to the main folder.</p>
@@ -121,7 +121,8 @@
 					<p>Once complete your rcon will be available at <span class="text-monospace">your.ip.address:8010</span></p>
 					<p id="step" style="font-weight:600;">&#x25BA; Container management and updates</p>
 					<p>To update your rcon to the latest version you will need to perform 3 seperate commands. Firstly you will need to stop the running containers, download the updates and then start the containers again.
-					<p><code class="text-monospace">sudo docker stop $(docker ps -q)</code></p>
+          <div class="alert alert-warning" role="alert"><b>Note: </b>You will need to navigate to your hll_rcon folder before running the below commands.</div>
+					<p><code class="text-monospace">sudo docker-compose down</code></p>
 					<p><code class="text-monospace">sudo docker-compose pull</code></p>
 					<p><code class="text-monospace">sudo docker-compose up -d</code></p>
 					<p>If you are experiencing any issues or are having any difficulties following these instructions, please join us on Discord so that we can help you.</p>
