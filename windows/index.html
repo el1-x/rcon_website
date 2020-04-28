@@ -31,7 +31,7 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="../assets/win.png" class="card-img" alt="Linux Install">
+            <img src="../assets/win.png" class="card-img" alt="Windows Install">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -54,28 +54,7 @@
         </ul>
       </div>
       <div id="windows-install">
-        <div id="preq">
-          <h3>Prerequisites</h3>
-          <hr>
-          <p> There are a couple of things that you will need to make this install as easy as possible.</p>
-          <p>
-						<ol>
-							<li>A copy of the latest <em>docker-compose.yml</em> file from the dev team.</li>
-							<li><em>.env</em> file containing your game server information.</li>
-							<li><em>broadcasts.txt</em> file for sending premade broadcast messaages to your server automatically</li>
-							<li>db_data, logs & pw folders</li>
-							<li><em>.htpasswd</em> file to protect your rcon from unauthorised access.</li>
-						</ol>
-					</p>
-          <p>Using the link below download the .zip file containing items 1-4 of the above list and extract the contents to a directory of your choosing i.e. /home/user.name/</p>
-          <a class="btn btn btn-lg btn-outline-primary" id="download" role="button" href="../assets/hll_rcon_tool.zip">Download</a>
-          <div class="alert alert-warning" role="alert">
-            <b>Note: </b>The rcon will not be installed within this folder but all logs and data will be stored here for easy access.
-          </div>
-        </div>
-        <div id="inst">
-        	<h5>To be updated.</h5>
-        </div>
+        <div class="alert alert-danger" role="alert"><b>Note: </b>We are currently working out some database permission issues when running under Windows. Until these issues are corrected, Windows installation instructions are on hold.</div>
       </div>
     </div>
     <!-- Bootstrap JavaScript -->
