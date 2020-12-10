@@ -1,87 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Current meta -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HLL Community RCON">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<!-- Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Links -->
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon16.png">
-		<link rel="shortcut icon" href="favicon.ico">
-		<title>HLL Community RCON</title>
-	</head>
-	<body>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		  <div class="container">
-			<a class="navbar-brand" href="#"><img src="assets/logo512.png" height="32" width="32"> HLL RCON</a>
-		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_navbar" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  	</button>
-		  	<div class="collapse navbar-collapse" id="my_navbar">
-		    	<div class="navbar-nav mr-auto">
-		        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-		        <a class="nav-item nav-link" href="contact/">Contact</a>
-		        <a class="nav-item nav-link" href="https://github.com/MarechJ/hll_rcon_tool">Git Hub</a>
-					</div>
-		  	</div>
-			</div>
-		</nav>
-		<main role="main">
-		  <!-- Main image & intro -->
-		  <div class="jumbotron">
-		    <div class="container" id="jumbo">
-		      <h1 class="cover-heading">RCON   [<em>ar k-on</em>]</h1>
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <title>HLL Community RCON</title>
+
+  </head>
+  <body>
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <img class="float-start me-3" src="assets/logo512.png" height="48" width="48">
+          <p class="masthead-brand">Hell Let Loose<br>Community Developed RCON</p>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="contact/">Contact</a>
+            <a class="nav-link" href="https://github.com/MarechJ/hll_rcon_tool">Git Hub</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover cover-container ms-auto me-auto">
+        <h1 class="cover-heading">RCON   [<em>ar k-on</em>]</h1>
 		      <p class="lead">Abbreviation for <em>remote console</em>.</p>
 					<p class="lead">A tool in which a remote connection is made to a game server to temporarily change server variables while you have no physical access to the machine.</p>
 		      <div id="jumbo-btn">Community Developed</div>
-		    </div>
-		  </div>
-		  <div class="container">
-		    <!-- Card deck -->
-				<div class="card">
-				  <div class="card-header"><h4>Choose you preferred platform for installation</h4></div>
-          <div class="card-deck">
-            <div class="card">
-              <img src="assets/linux.png" class="card-img-top" alt="Linux install">
-              <div class="card-body">
-                <h5 class="card-title">Linux</h5>
-                <p class="card-text">This is the preferred installation method and can be completed on almost any distribution of your choosing.</p>
-                <a href="linux/" class="align-self-end btn btn-primary">View details</a>
-              </div>
-            </div>
-            <div class="card">
-              <img src="assets/win.png" class="card-img-top" alt="Windows Install">
-              <div class="card-body">
-                <h5 class="card-title">Windows</h5>
-                <p class="card-text">The best option for users who wish to run the application from their Windows based game server.</p>
-                <a href="windows/" class="btn btn-primary">View details</a>
-              </div>
-            </div>
-            <div class="card">
-              <img src="assets/docker.png" class="card-img-top" alt="Docker GUI">
-              <div class="card-body">
-                <h5 class="card-title">Docker GUI</h5>
-                <p class="card-text">The desktop/GUI verion of Docker can be used on many different devices such as a Synology NAS</p>
-                <a href="gui/" class="btn btn-primary">View details</a>
-              </div>
-            </div>
-          </div>
-				</div>
-		    <hr>
-		  </div> <!-- /container -->
-		</main>
-		<footer class="container">
-		  <p><small class="text-muted">Initial concept and development by <a href="https://github.com/MarechJ">MarechJ</a>, image by <a href="https://steamcommunity.com/id/BrezzIsBae/images">Brezz</a>. Built using <img src="assets/bootstrap.png" width="24" height="24" title="Bootstrap"></small></p>
-		</footer>
-		<!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
-	</body>
+      </main>
+
+      <footer class="mastfoot mt-auto ms-auto me-auto">
+        <div class="inner">
+          <p><small>Initial concept and development by <a href="https://github.com/MarechJ">MarechJ</a>, image by <a href="https://steamcommunity.com/id/BrezzIsBae/images">Brezz</a>. Built using <img src="assets/bootstrap.png" width="24" height="24" title="Bootstrap"></small></p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  </body>
 </html>
-		

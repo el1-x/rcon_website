@@ -1,0 +1,84 @@
+/** Global **/
+body {
+	padding-top: 3.5rem;
+	margin-bottom: 2rem;
+	color: #333;
+}
+
+footer {
+	text-align: center;
+}
+
+#container-main {
+	border: 1px solid;
+	border-color: lightgrey;
+	padding: 2rem;
+	max-width: 64rem;
+}
+
+/** Index & Contact **/
+.jumbotron {
+	background: url(assets/hll_brezz.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 400px;
+	color: #fff;
+	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+#contact {
+	background: #7289da;
+	color: #fff;
+	text-shadow: none;
+}
+
+#jumbo-btn {
+	float: right;
+	text-shadow: none;
+	padding: .5rem 1rem;
+	font-size: 1.25rem;
+	border: 1px solid;
+	border-radius: .3rem;
+	border-color: #fff;
+}
+
+.container {
+	max-width: 58em;
+}
+
+.card-header {
+	color: #999;
+	text-align: center;
+}
+
+#join-btn {
+	color: #fff;
+	background-color: #7289da;
+}
+
+/** Instrutions **/
+.mb-3 {
+	margin-top: 2rem;
+}
+
+.title {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+#preq {
+	margin-bottom: 4rem;
+}
+
+#step {
+	font-size: 12pt;
+}
+
+code {
+	margin-left: 4rem;
+	width: 40rem;
+}
+
+#download {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
