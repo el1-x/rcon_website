@@ -73,7 +73,7 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 .cover #jumbo-btn {
-	float: right;
+  float: right;
 	text-shadow: none;
 	padding: .5rem 1rem;
   font-size: 1.25rem;
@@ -125,8 +125,4 @@ a:hover {
 
  .btn:hover {
    color: white;
- }
-
- #nav-brand-text {
-   color: #303030;
  }
