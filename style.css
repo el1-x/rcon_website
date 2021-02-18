@@ -109,21 +109,18 @@ a:hover {
   top: 0;
   left: 10%;
   transform: skew(-10deg) translateX(-50%);
+  transition: ease 1s;
   background: white;
-  /*background-image: linear-gradient(#3f51b5,#424242,#303030);*/
   z-index: -1;
 }
  .contact {
-   margin-top: 8rem;
-   margin-left: 8.6rem;
    max-width: 35%;
-   color: #303030;
  }
 
  .btn {
    color: white;
-   border-color: #738adb;
-   background-color: #738adb;
+   border-color: #7289da;
+   background-color: #7289da;
  }
 
  .btn:hover {
