@@ -1,70 +1,128 @@
-/** Global **/
+/*
+ * Globals
+ */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/*
+ * Base structure
+ */
+
+html,
 body {
-  padding-top: 3.5rem;
+  height: 100%;
 }
 
-footer {
-	text-align: center;
-}
-
-/** Index & Contact **/
-.jumbotron {
-	background: url(assets/hll_brezz.jpg) no-repeat center center;
+body {
+  background: url(assets/hll.jpg) no-repeat center center;
 	background-size: cover;
-	min-height: 400px;
-	color: #fff;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+
+.navbar-brand {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.navbar-nav {
+  margin-left: 4rem;
+}
+
+.navbar .nav-link {
+  padding: .25rem 0;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+}
+
+.navbar .link-inner {
+  border-bottom: .1rem solid transparent;
+}
+.navbar .link-inner:hover,
+.navbar .link-inner:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.navbar .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/*
+ * Cover
+ */
+
+.cover-container {
+  max-width: 42em;
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+
+.cover p {
+  font-weight: 500;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+.cover #jumbo-btn {
+  float: right;
+	text-shadow: none;
+	padding: .5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+	border: 1px solid;
+	border-radius: .3rem;
+	border-color: #fff;
+}
+
+/*
+ * Footer
+ */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+.foot {
+  color: #fff;
 	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
-#contact {
-	background: #7289da;
-	color: #fff;
-	text-shadow: none;
-}
+/*
+ * Contact
+ */
 
-#jumbo-btn {
-	float: right;
-	text-shadow: none;
+.left::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  left: 10%;
+  transform: skew(-10deg) translateX(-50%);
+  transition: ease 1s;
+  background: white;
+  z-index: -1;
 }
+ .contact {
+   max-width: 35%;
+ }
 
-.container {
-	max-width: 58em;
-}
+ .btn {
+   color: white;
+   border-color: #7289da;
+   background-color: #7289da;
+ }
 
-.card-header {
-	color: #999;
-	text-align: center;
-}
-
-#join-btn {
-	color: #fff;
-	background-color: #7289da;
-}
-
-/** Instrutions **/
-.mb-3 {
-	margin-top: 2rem;
-}
-
-.title {
-	margin-top: 4rem;
-	margin-bottom: 4rem;
-}
-
-#preq {
-	margin-bottom: 4rem;
-}
-
-#step {
-	font-size: 12pt;
-}
-
-code {
-	margin-left: 4rem;
-	width: 40rem;
-}
-
-#download {
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-}
+ .btn:hover {
+   color: white;
+ }
